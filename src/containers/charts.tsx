@@ -1,5 +1,5 @@
 import Sidebar from "../components/sidebar";
-import { MapContainer, Marker, Popup } from "react-leaflet";
+import { Map, Marker, Popup } from "react-leaflet";
 import { TileLayer } from "react-leaflet";
 import { useQuery } from "react-query";
 import "leaflet/dist/leaflet.css";
@@ -81,7 +81,7 @@ const ChartsPage = () => {
       <Sidebar />
       <div className="w-[60vw] h-[70vh] flex flex-col justify-center gap-4">
         <div className="w-[60vw] h-[35vh] p-5 rounded-md">
-          <MapContainer center={[54, -2]} zoom={3} scrollWheelZoom={false}>
+          <Map center={[54, -2]} zoom={3} scrollWheelZoom={false}>
             <TileLayer
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
               url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
@@ -98,7 +98,7 @@ const ChartsPage = () => {
                 </Popup>
               </Marker>
             ))}
-          </MapContainer>
+          </Map>
         </div>
         <div className="w-full h-1/2 p-5 rounded-md">
           <Line options={options} data={data} />
