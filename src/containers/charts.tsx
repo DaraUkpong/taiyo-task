@@ -83,8 +83,9 @@ const ChartsPage = () => {
         <div className="w-[60vw] h-[35vh]">
           <MapContainer center={[54, -2]} zoom={3} scrollWheelZoom={false} style={{height: "100%"}} placeholder={"This is fully functional,  but it refuses to show"}>
             <TileLayer
+                url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"       
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-              url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
+    
             />
             {allCountries.map((country: any, id: any) => (
               <Marker
