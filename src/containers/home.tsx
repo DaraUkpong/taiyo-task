@@ -11,22 +11,27 @@ import CreateForm from "../components/createContact";
 const Home = () => {
   const allContacts = useAppSelector(contacts);
   const dispatch = useAppDispatch();
+
+  //"currentContact"- Data to be passed down to the initial values of the editForm component 
+  //(showEditForm and showCreateForm) - states used to enable modal feature for forms
   const [showEditForm, setShowEditForm] = useState(false);
   const [showCreateForm, setShowCreateForm] = useState(false);
   const [currentContact, setCurrentContact] = useState("");
+
+//Function that dispatches data to the contatct state
   const getContacts = async () => {
     const res = await axios.get(
       "https://645bba4da8f9e4d6e7715bbb.mockapi.io/contacts"
     );
     dispatch(setContacts(res.data));
   };
-
-  const deleteContact = async (id: any) => {
+//function that deletes a user from the database
+const deleteContact = async (id: any) => {
     await axios
       .delete(`https://645bba4da8f9e4d6e7715bbb.mockapi.io/contacts/${id}`)
       .then(() => alert("deleted!"));
   };
-
+//The useQuery hook is called from react-query which fires the "getContacts fuction on every render"
   useQuery("contacts", getContacts);
 
   const toggleEditForm = (contact: any) => {

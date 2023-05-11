@@ -12,6 +12,9 @@ let intistate: contact = {
   lastname: "",
   status: "false",
 };
+
+// This component performs a simple post request to the database to create a contact. This is a promise based fuction
+//and performs a window refresh on completion
 const CreateForm = () => {
   const [intiValues, setInitValues] = useState<contact>(intistate);
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
