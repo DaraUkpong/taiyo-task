@@ -79,8 +79,8 @@ const ChartsPage = () => {
     <div className="w-screen h-screen bg-white flex flex-col items-center justify-center">
       <Sidebar />
       <div className="w-[60vw] h-[70vh] flex flex-col justify-center gap-4">
-        <div className="w-full h-1/2 p-5 rounded-md">
-          <MapContainer center={[54, -2]} zoom={3} scrollWheelZoom={false}>
+        <div className="w-full h-1/2 p-5 rounded-md flex flex-col items-center justify-center">
+          <MapContainer center={[54, -2]} zoom={3} scrollWheelZoom={false} style={{height: "100%"}}>
             <TileLayer
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
               url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
