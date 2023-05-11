@@ -2,6 +2,7 @@ import Sidebar from "../components/sidebar";
 import { MapContainer, Marker, Popup } from "react-leaflet";
 import { TileLayer } from "react-leaflet";
 import { useQuery } from "react-query";
+import "leaflet/dist/leaflet.css";
 import axios from "axios";
 import {
   countries,
