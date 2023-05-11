@@ -80,7 +80,7 @@ const ChartsPage = () => {
     <div className="w-screen h-screen bg-white flex flex-col items-center justify-center">
       <Sidebar />
       <div className="w-[60vw] h-[70vh] flex flex-col justify-center gap-4">
-        <div className="w-[60vw] h-[35vh] p-5 rounded-md">
+        <div className="w-[60vw] h-[35vh]">
           <Map center={[54, -2]} zoom={3} scrollWheelZoom={false}>
             <TileLayer
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
