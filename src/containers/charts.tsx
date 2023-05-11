@@ -81,7 +81,7 @@ const ChartsPage = () => {
       <Sidebar />
       <div className="w-[60vw] h-[70vh] flex flex-col justify-center gap-4">
         <div className="w-[60vw] h-[35vh]">
-          <MapContainer center={[54, -2]} zoom={3} scrollWheelZoom={false} placeholder={"This is fully functional,  but it refuses to show"}>
+          <MapContainer center={[54, -2]} zoom={3} scrollWheelZoom={false} styles={{height: "100%"}} placeholder={"This is fully functional,  but it refuses to show"}>
             <TileLayer
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
               url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
