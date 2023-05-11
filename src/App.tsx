@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
+import "leaflet/dist/leaflet.css"
 import Home from "./containers/home";
 import ChartsPage from "./containers/charts";
 import { QueryClientProvider, QueryClient } from "react-query";
