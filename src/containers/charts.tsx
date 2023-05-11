@@ -83,7 +83,7 @@ const ChartsPage = () => {
           <MapContainer center={[54, -2]} zoom={3} scrollWheelZoom={false}>
             <TileLayer
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
             {allCountries.map((country: any, id: any) => (
               <Marker
