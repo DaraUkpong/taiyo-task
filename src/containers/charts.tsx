@@ -81,10 +81,10 @@ const ChartsPage = () => {
       <Sidebar />
       <div className="w-[60vw] h-[70vh] flex flex-col justify-center gap-4">
         <div className="w-full h-1/2 p-5 rounded-md flex flex-col items-center justify-center">
-          <MapContainer center={[54, -2]} zoom={3} scrollWheelZoom={false} style={{height: "100%"}}>
+          <MapContainer center={[54, -2]} zoom={3} scrollWheelZoom={false}>
             <TileLayer
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-              url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
+              url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
             />
             {allCountries.map((country: any, id: any) => (
               <Marker
